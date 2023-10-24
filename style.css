@@ -78,10 +78,23 @@ header .container{
     margin-left:4.5rem;
     display:inline-block;
 }
+.links a:after{
+    content:"";
+    position:absolute;
+    background-color:var(--blueColor);
+    width:0;
+    height:3px;
+    bottom:-10px;
+    left:0;
+  
+}
 .links a:hover{
     color:var(--blueColor);
     transform:scale(1.05);
     transition:0.3s;
+}
+.links a:hover:after {
+    width: 100%;
 }
 
 .btn{
