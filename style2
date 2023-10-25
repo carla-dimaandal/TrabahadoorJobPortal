@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --primaryColor:#1282a2;
+    --blueColor:#1c2d45;
+    --whiteColor:#fff;
+    --blackColor:#333;
+    --textColor: #5A5A5A;
+
+}
+
+*, *:before, *:after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    font-family:'Poppins', sans-serif;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:url(images/image.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-bottom: 60px;
+    background:transparent;
+ }
+ 
+ .form-container form{
+    padding:20px;
+    border:2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background:transparent;
+    backdrop-filter:blur(20px);
+    text-align: center;
+    width: 500px;
+    border-radius:10px;
+ }
+ .form-container form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:var(--blueColor);
+ }
+ 
+ .form-container form input,
+ .form-container form select{
+    width: 100%;
+    padding:10px 15px;
+    font-size: 17px;
+    margin:8px 0;
+    background: #eee;
+    border-radius: 5px;
+ }
+ 
+ .form-container form select option{
+    background: #fff;
+ }
+ 
+ .form-container form .form-btn{
+    background:var(--primaryColor);
+    color:rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+ }
+ 
+ .form-container form .form-btn:hover{
+    background: var(--blueColor);
+    color:#fff;
+ }
+ 
+ .form-container form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color:#333;
+ }
+ 
+ .form-container form p a{
+    color:var(--primaryColor);
+ }
+ 
+ .form-container form .error-msg{
+    margin:10px 0;
+    display: block;
+    background: var(--blueColor);
+    color:#fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding:10px;
+ }
+ 
