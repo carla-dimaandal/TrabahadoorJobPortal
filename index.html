@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TBDlogo.png">
+    <script type="text/javascript" src="tryjs.js"></script>  
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +20,45 @@
             <header>
                 <div class="container">
                     <div class="logo">
-                        <!--u can put logo here-->
+                        <img src="TBDlogo.png" alt="Logo" class="img">
                         <h3>Trabahadoor</h3>
                     </div>
-                    <div class="links">
-                        <ul>
+                        <ul class="links">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#candidates">Candidates</a></li>
                             <li><a href="#jobs">Jobs</a></li>
                             <li><a href="#companies">Companies</a></li>
-                            <li><a href="Login_Form.html" class="btn">Log in</a></li>
                         </ul>
+                        <a href="Login_Form.html" class="btn">Log in</a>
+                        <!--Open burger menu-->
+                        <div class="open-menu">
+                            <i class="fas fa-bars"></i>  
                     </div>
                 </div>
+                <div class="dropdown-menu">
+                    <ul> 
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#candidates">Candidates</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="Login_Form.html" class="btn">Log in</a></li>
+                    </ul>
+                </div>
             </header>
+            <script>
+                const open_menu = document.querySelector('.open-menu')
+                const open_menu_icon = document.querySelector('.open-menu i')
+                const dropdown = document.querySelector('.dropdown-menu')
+
+                open_menu_icon.onclick = function(){
+                    dropdown.classList.toggle('open')
+                    const isOpen = dropdown.classList.contains('open')
+
+                    open_menu_icon.classList = isOpen
+                    ? 'fas fa-times'
+                    : 'fas fa-bars'
+                }
+            </script>
             <div class="showcase-area">
                 <div class="container">
                 <div class="left">
@@ -64,13 +91,49 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatum fuga aliquid obcaecati suscipit quae quaerat reprehenderit eius vitae consequatur! 
                                 Dignissimos quibusdam fuga sapiente voluptate placeat minima non et quae!
                             </p>
-                            <a href="#" class="btn">Learn More</a>
+                            <br><a href="#" class="btn">Learn More</a>
                         </div>
-
-                    
+                     </div>
+                    </section>
+            
+            <section class="explore-container">
+                <div class="explore-header">
+                    <h2 class="section-header">EXPLORE OUR OBJECTIVES</h2>
+                    <div class="explore-nav">
+                    </div>
+            
                 </div>
+                    <div class="explore-grid">
+                        <div class="explore-card">
+                            <span><i class="ri-service-line"></i></span>
+                            <h4>Concern</h4>
+                            <p>Trabahadoor aims to help Persons with Disabilities to land a decent, fair job</p>
+                            <a href="#">Sign up now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="explore-card">
+                            <span><i class="ri-lightbulb-line"></i></span>
+                            <h4>Concern</h4>
+                            <p>Trabahadoor aims to help Persons with Disabilities to land a decent, fair job</p>
+                            <a href="#">Sign up now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="explore-card">
+                            <span><i class="ri-service-line"></i></span>
+                            <h4>Concern</h4>
+                            <p>Trabahadoor aims to help Persons with Disabilities to land a decent, fair job</p>
+                            <a href="#">Sign up now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="explore-card">
+                            <span><i class="ri-service-line"></i></span>
+                            <h4>Concern</h4>
+                            <p>Trabahadoor aims to help Persons with Disabilities to land a decent, fair job</p>
+                            <a href="#">Sign up now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+
             </section>
         </div>
+
+        
     </main>
 </body>
 </html>
