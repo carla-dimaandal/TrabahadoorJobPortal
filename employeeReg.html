@@ -1,78 +1,147 @@
-<!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <header>Registration Form</header>
-      <form action="#" class="form">
-        <div class="input-box">
-          <label>Full Name</label>
-          <input type="text" placeholder="Enter full name" required />
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabahadoor Online Job Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="icon" href="TBDlogo.png">
+    <script type="text/javascript" src="tryjs.js"></script>  
+<!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<html>
+    <body>
+        <main class="big-wrapper">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <img src="TBDlogo.png" alt="Logo" class="img">
+                        <h3>Trabahadoor</h3>
+                    </div>
+                        <ul class="links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <a href="Login_Form.html" class="btn">Log in</a>
+                        </ul>
+                
+                        <!--Open burger menu-->
+                        <div class="open-menu">
+                            <i class="fas fa-bars"></i>  
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <ul> 
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <a href="Login_Form.html" class="btn">Log in</a>
+                    </ul>
+                </div>
+            </header>
+            <script>
+                const open_menu = document.querySelector('.open-menu')
+                const open_menu_icon = document.querySelector('.open-menu i')
+                const dropdown = document.querySelector('.dropdown-menu')
 
-        <div class="input-box">
-          <label>Email Address</label>
-          <input type="text" placeholder="Enter email address" required />
-        </div>
+                open_menu_icon.onclick = function(){
+                    dropdown.classList.toggle('open')
+                    const isOpen = dropdown.classList.contains('open')
 
-        <div class="column">
-          <div class="input-box">
-            <label>Phone Number</label>
-            <input type="number" placeholder="Enter phone number" required />
-          </div>
-          <div class="input-box">
-            <label>BirthDate</label>
-            <input type="date" placeholder="Enter birth date" required />
-          </div>
-        </div>
-        <div class="gender-box">
-          <h3>Gender</h3>
-          <div class="gender-option">
-            <div class="gender">
-              <input type="radio" id="check-male" name="gender" checked />
-              <label for="check-male">Male</label>
+                    open_menu_icon.classList = isOpen
+                    ? 'fas fa-times'
+                    : 'fas fa-bars'
+                }
+            </script>
+    <!--Start of Reg Form-->
+        <div class="Mainshowcase">
+            <section class="Regform">
+                <h3>Registration Form</h3>
+                <form action="#" class="form">
+                  <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" id="Fullname" name="Fullname" placeholder="Enter full name" required />
+                  </div>
+          
+                  <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" id="E-mail" name="E-mail" placeholder="Enter email address" required />
+                  </div>
+          
+                  <div class="column">
+                    <div class="input-box">
+                      <label>Phone Number</label>
+                      <input type="number" id="Pnumber" name="Pnumber" placeholder="Enter phone number" required />
+                    </div>
+                    <div class="input-box">
+                      <label>BirthDate</label>
+                      <input type="date" id="Bday" name="Bday" placeholder="Enter birth date" required />
+                    </div>
+                  </div>
+                  <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                      <div class="gender">
+                        <input type="radio" id="check-male" name="Gender" checked />
+                        <label for="check-male">Male</label>
+                      </div>
+                      <div class="gender">
+                        <input type="radio" id="check-female" name="Gender" />
+                        <label for="check-female">Female</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-box">
+                    <label>Type of Disability</label>
+                    <input type="text" id="TPWD" name="TPWD" placeholder="Enter your Disability" required />
+                  </div>
+                  <div class="input-box address">
+                    <label>Address</label>
+                    <input type="text" id="Saddress" name="Saddress" placeholder="Enter street address" required />
+                    <div class="column">
+                      <input type="text" id="Baddress" name="Baddress" placeholder="Enter your barangay" required />
+                      <input type="text" id="Caddress" name="Caddress" placeholder="Enter your city" required />
+                    </div>
+                    <div class="column">
+                      <input type="text" id="region" name="region" placeholder="Enter your region" required />
+                      <input type="number" id="postal" name="postal" placeholder="Enter postal code" required />
+                    </div>
+                  </div>
+
+                  <div class="input-box">
+                    <label>Skills</label>
+                    <input type="text" id="skills" name="skills" placeholder="Enter your skill/s (Type NA if none)" required />
+                  </div>
+                  
+                  <div class="input-box">
+                    <label>Work Experience</label>
+                    <input type="text" id="WorkE" name="WorkE" placeholder="Enter your Work Experience (Type NA if none)" required />
+                  </div>
+
+                
+                <div class="input-box">
+                    <label>Upload the following requirements</label><br>
+                    <label>Resume</label>
+                    <input type="file" id="Resume" name="Resume" required /> <br>
+                    <label>PWD ID</label>
+                    <input type="file" id="PWDID" name="PWDID" required />
+                  </div>
+                  <input type="submit" name="Submit" value="SUBMIT" class="form-btn">
+                </form>
+            </section>
             </div>
-            <div class="gender">
-              <input type="radio" id="check-female" name="gender" />
-              <label for="check-female">Female</label>
-            </div>
-            <div class="gender">
-              <input type="radio" id="check-other" name="gender" />
-              <label for="check-other">Prefer not to say</label>
-            </div>
-          </div>
-        </div>
-        <div class="input-box address">
-          <label>Address</label>
-          <input type="text" placeholder="Enter street address" required />
-          <input type="text" placeholder="Enter street address line 2" required />
-          <div class="column">
-            <div class="select-box">
-              <select>
-                <option hidden>Country</option>
-                <option>America</option>
-                <option>Japan</option>
-                <option>India</option>
-                <option>Nepal</option>
-                <option>Philippines</option>
-                <option>Korea</option>
-              </select>
-            </div>
-            <input type="text" placeholder="Enter your city" required />
-          </div>
-          <div class="column">
-            <input type="text" placeholder="Enter your region" required />
-            <input type="number" placeholder="Enter postal code" required />
-          </div>
-        </div>
-        <button>Submit</button>
-      </form>
-    </section>
-  </body>
+        </main>
+    </body>
 </html>
