@@ -1,122 +1,341 @@
-/* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --primaryColor:#1282a2;
+    --blueColor:#1c2d45;
+    --whiteColor:#fff;
+    --blackColor:#333;
+    --textColor: #5A5A5A;
+    --grayColor:#f0f0f0;
+    --yellowColor:#f0cc00;
 }
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgb(130, 106, 251)
+
+*, *:before, *:after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
 }
-.container {
-  position: relative;
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+body{
+    font-family:'Poppins', sans-serif;
 }
-.container header {
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: 500;
-  text-align: center;
+section{
+    padding:2rem 7%;
 }
-.container .form {
-  margin-top: 30px;
+img{
+    width:100%;
+}
+a{
+    text-decoration:none;
+}
+.big-wrapper{
+    padding:1.7rem 0.2rem;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+    background-color:#f1f8fc;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.container{
+    position:relative;
+    max-width:81rem;
+    width:100%;
+    margin:0 auto;
+    padding: 0 3rem 2rem;
+    z-index:10;
+}
+header .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+}
+.logo img{
+    width:40px;
+    margin-right:0.6rem;
+    margin-top:0.6rem;
+}
+.logo h3{
+    color:var(--primaryColor);
+    font-size: 1.55rem;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.links{
+    display:flex;
+    list-style:none;
+    align-items:center;
+}
+
+.links a{
+    color:gray;
+    margin-left:4.5rem;
+    display:inline-block;
+}
+.links a:after{
+    content:"";
+    position:absolute;
+    background-color:var(--blueColor);
+    width:0;
+    height:3px;
+    bottom:-10px;
+    left:0;
+  
+}
+.links a:hover{
+    color:var(--blueColor);
+    transform:scale(1.05);
+    transition:0.3s;
+}
+.links a:hover:after {
+    width: 100%;
+}
+
+.container .btn{
+    display:inline-block;
+    padding: .9rem 1.9rem;
+    color: #fff !important;
+    background-color:var(--blueColor);
+    border-radius: 16px;
+    text-transform:capitalize;
+    transition: .3s;
+}
+
+.container .btn:hover{
+    background-color:var(--primaryColor);
+    transform: scale(1) !important;
+}
+
+.open-menu {
+    display: none;
+    cursor: pointer;
+    top: 2em;
+    right: 20px;
+    padding: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    
+}
+
+@media (max-width: 958px){
+    .links,
+    .container .btn{
+        display: none;
+    }
+    
+    .open-menu{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        
+
+    }
+    
+}
+
+@media (max-width: 750px){
+    .right{
+        display:none; 
+    }
+    .image{
+        display: none;
+    }
+
+    .footerNav ul{
+        flex-direction: column;
+    }
+
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+.dropdown-menu{
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 300px;
+    height: 0;
+    background-color: var(--blueColor);
+    backdrop-filter: blur(50px);
+    z-index: 100;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    
+
+}
+
+.dropdown-menu.open{
+    height: 100vh;
+
+}
+
+.dropdown-menu li{
+    color:var(--whiteColor);
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dropdown-menu li a{
+    color:var(--whiteColor);
+    text-decoration:none;
+}
+
+.dropdown-menu .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: .9rem 1.9rem;
+    color: #fff !important;
+    background-color:var(--blueColor);
+    border-radius: 16px;
+    text-transform:capitalize;
+    transition: .3s; 
+
+}
+.cta .btn{
+    display:inline-block;
+    padding: .9rem 1.9rem;
+    color: #fff !important;
+    background-color:var(--blueColor);
+    border-radius: 16px;
+    text-transform:capitalize;
+    transition: .3s;
+}
+.cta .btn:hover{
+    background-color:var(--primaryColor);
+    transform: scale(1) !important;
+}
+
+/*mainshowcase*/
+
+.Mainshowcase {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--primaryColor);
+}
+.Regform {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border:2px solid rgba(6, 6, 6, 0.2);
+    border-radius: 5px;
+}
+.Regform h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:var(--blueColor);
+}
+.Regform .form {
+    margin-top: 30px;
+    
 }
 .form .input-box {
-  width: 100%;
-  margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+    
 }
 .input-box label {
-  color: #333;
+    color: #333;
+    font-weight: bold;
 }
 .form :where(.input-box input, .select-box) {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  outline: none;
-  font-size: 1rem;
-  color: #707070;
-  margin-top: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0 15px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: var(--blackColor);
+    margin-top: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px; 
+    padding: 0 15px;
 }
 .input-box input:focus {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 .form .column {
-  display: flex;
-  column-gap: 15px;
+    display: flex;
+    column-gap: 15px;
 }
 .form .gender-box {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 .gender-box h3 {
-  color: #333;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 .form :where(.gender-option, .gender) {
-  display: flex;
-  align-items: center;
-  column-gap: 50px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
 }
 .form .gender {
-  column-gap: 5px;
+    column-gap: 5px;
 }
 .gender input {
-  accent-color: rgb(130, 106, 251);
+    accent-color: var(--primaryColor);
 }
 .form :where(.gender input, .gender label) {
-  cursor: pointer;
+    cursor: pointer;
 }
 .gender label {
-  color: #707070;
+    color: #707070;
 }
 .address :where(input, .select-box) {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-.select-box select {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  color: #707070;
-  font-size: 1rem;
+.form-btn {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-top: 30px;
+    border: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--primaryColor);
+    border-radius: 5px;
+
 }
-.form button {
-  height: 55px;
-  width: 100%;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 30px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background: rgb(130, 106, 251);
+.form-btn:hover {
+    background: var(--blueColor);
+    
 }
-.form button:hover {
-  background: rgb(88, 56, 250);
-}
-/*Responsive*/
+
 @media screen and (max-width: 500px) {
-  .form .column {
-    flex-wrap: wrap;
+    .form .column {
+      flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
   }
-  .form :where(.gender-option, .gender) {
-    row-gap: 15px;
-  }
-}
