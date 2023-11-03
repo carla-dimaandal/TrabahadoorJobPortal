@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root {
+    --primaryColor:#1282a2;
+    --blueColor:#1c2d45;
+    --whiteColor:#fff;
+    --blackColor:#333;
+    --textColor: #5A5A5A;
+
+}
 
 *{
     margin: 0;
@@ -8,26 +16,26 @@
 }
 
 body{
-    background-color: #1f1f1f;
+    background-color: var(--whiteColor);
 }
 
 h1{
     font-size: 4rem;
-    color: #fff;
+    color: var(--primaryColor);
 }
 
 h2{
     font-size: 3rem;
-    color: #fff;
+    color: var(--primaryColor);
 }
 
 h3{
     font-size: 1.4rem;
-    color: #fff;
+    color: var(--blueColor);
 }
 
 p{
-    color: #999;
+    color: var(--blueColor);
 }
 
 a{
@@ -59,7 +67,7 @@ img{
 }
 
 .top--title{
-    color: #fff;
+    color: var(--blueColor);
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 5px 16px;
@@ -74,24 +82,24 @@ img{
 }
 
 .title span{
-    color: #27e187;
+    color:var(--blueColor);
 }
 
 
 .btn{
     padding: 8px 18px;
-    background-color: #27e187;
+    background-color: var(--primaryColor);
     border-radius: 2rem;
     text-align: center;
     font-weight: bold;
-    color: #1f1f1f;
-    border: 2px solid #27e187;
+    color: var(--whiteColor);
+    border: 2px solid var(--blueColor);
     cursor: pointer;
 }
 
 .btn:hover{
     background-color: #1f1f1f;
-    color: #27e187;
+    color: var(--blueColor);
     transition: 0.3s;
 }
 
@@ -101,14 +109,14 @@ img{
     text-align: center;
     font-weight: bold;
     border: 2px solid #565656;
-    color: #999;
+    color: var(--blackColor);
     cursor: pointer;
 }
 
 .btn--line:hover{
-    background-color: #27e187;
-    border-color: #27e187;
-    color: #1f1f1f;
+    background-color: var(--blueColor);
+    border-color: var(--blackColor);
+    color: var(--whiteColor);
     transition: 0.3s;
 }
 
@@ -205,7 +213,7 @@ img{
 }
 
 .intro--flex h1{
-    color: #27e187;
+    color: var(--primaryColor);
 }
 
 .about .title{
@@ -255,7 +263,7 @@ img{
 }
 
 .projects{
-    color: #fff;
+    color: var(--blueColor);
     display: inline-block;
     margin-top: 1.5rem;
     text-transform: uppercase;
@@ -286,7 +294,7 @@ img{
 }
 
 .skill h3{
-    color: #27e187;
+    color: var(--primaryColor);
 }
 
 .skills p{
@@ -338,7 +346,7 @@ img{
 
 .contact--card i{
     font-size: 2rem;
-    color: #27e187;
+    color: var(--primaryColor);
     margin-bottom: 1rem;
     display: inline-block;
 }
