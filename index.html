@@ -21,48 +21,25 @@
     <main>
         <div class="big-wrapper">
             <header>
-                <div class="container">
-                    <div class="logo">
-                        <img src="TBDlogo.png" alt="Logo" class="img">
-                        <h3>Trabahadoor</h3>
-                    </div>
-                        <ul class="links">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <a href="Login_Form.html" class="btn">Log in</a>
-                        </ul>
-                
-                        <!--Open burger menu-->
-                        <div class="open-menu">
-                            <i class="fas fa-bars"></i>  
-                    </div>
-                </div>
-                <div class="dropdown-menu">
-                    <ul> 
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <a href="Login_Form.html" class="btn">Log in</a>
+                <nav>
+                    <ul class='nav-bar'>
+                        <div class="logo">
+                            <img src="TBDlogo.png" alt="Logo" class="img">
+                            <h3>Trabahadoor</h3>
+                        </div>
+                        <input type='checkbox' id='check' />
+                        <span class="menu">
+                            <li><a href="home">Home</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="services">Services</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="Login_Form.html" class="btn">Log in</a></li>
+                            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                        </span>
+                        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                     </ul>
-                </div>
+                </nav>
             </header>
-            <script>
-                const open_menu = document.querySelector('.open-menu')
-                const open_menu_icon = document.querySelector('.open-menu i')
-                const dropdown = document.querySelector('.dropdown-menu')
-
-                open_menu_icon.onclick = function(){
-                    dropdown.classList.toggle('open')
-                    const isOpen = dropdown.classList.contains('open')
-
-                    open_menu_icon.classList = isOpen
-                    ? 'fas fa-times'
-                    : 'fas fa-bars'
-                }
-            </script>
     <!-- showcasee area starts -->
             <div class="showcase-area" id="home">
                 <div class="container">
