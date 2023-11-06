@@ -72,12 +72,16 @@ header .container{
     height:500px;   */
    
  }
+ .form-container .welcome{
+   width:500px;
+   height:433px;
+ }
  .form-container .welcome img{
    border:2px solid rgba(6, 6, 6, 0.2);
    box-shadow: 0 0 10px rgba(0,0,0,.2);
    backdrop-filter:blur(100px);
    width: 500px;
-   height:440px;
+   height:433px;
    /* margin-left:20rem; */
  }
 
