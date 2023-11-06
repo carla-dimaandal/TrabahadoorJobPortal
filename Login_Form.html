@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Login Form</title>
+        <title>Register Form</title>
         <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="icon" href="TBDlogo.png">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     </head>
 <body>
-    <div class="big-wrapper">
     <header>
         <div class="container">
             <div class="logo">
@@ -16,22 +16,24 @@
             </div>
         </div>
     </header>
-        <div class="form-container">
-            <div class="welcome">
-                <img src="login-img.png" alt="welcome">
-            </div>
+    <div class="form-container">
+        <div class="welcome">
+            <img src="login-img.png" alt="welcome">
+        </div>
+
         <form action="" method="">
-            <img src="TBDlogo.png" alt="Logo" class="img" width="40px">
+                <img src="TBDlogo.png" alt="Logo" class="img" width="40px">
+            <input type="text" name="name" required placeholder="Enter your name" >
             <input type="email" name="email" required placeholder="Enter your email" >
             <input type="password" name="password" required placeholder="Enter your password" >
-            <input type="submit" name="Submit" value="Login" class="form-btn">
-            <p>Don't have an account? <a href="Register_Form.html"> Sign up</a></p>
-            <p class="privacy">
-                Privacy Policy <br> We take your privacy very seriously. We do not share your details for marketing purposes with any external companies. 
-                Your information may only be shared with our third party partners so that we may offer our service.</p>
+            <input type="password" name="cpassword" required placeholder="Confirm your password" >
+            <select name="User_type">
+                <option value="Employee">Employee</option>
+                <option value="Employer">Employer</option>
+            </select>
+            <input type="submit" name="Submit" value="Register" class="form-btn">
+            <p>Already have an account? <a href="Login_Form.html"> Login</a></p>
         </form>
-        
-    </div>
     </div>
     <footer>
         <div clas="footerContainer">
@@ -53,6 +55,5 @@
             </div>
         </div>
        </footer>
-
 </body>
 </html>
