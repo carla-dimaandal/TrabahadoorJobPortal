@@ -68,8 +68,8 @@ header .container{
     justify-content: center;
     padding:20px;
     padding-bottom: 60px;
-    /*width: 1000px;
-    height:500px;  eto for responsiveness*/
+    /* width: 1000px;
+    height:500px;   */
    
  }
  .form-container .welcome img{
@@ -77,8 +77,8 @@ header .container{
    box-shadow: 0 0 10px rgba(0,0,0,.2);
    backdrop-filter:blur(100px);
    width: 500px;
-   height:500px;
-   margin-left:20rem;
+   height:440px;
+   /* margin-left:20rem; */
  }
 
  @media (max-width: 958px){
