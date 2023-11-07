@@ -89,6 +89,9 @@ header .container{
    .form-container .welcome{
       display: none;
    }
+   .form-container .welcome-reg{
+      display: none;
+   }
 }
  .form-container form{
     padding:20px;
