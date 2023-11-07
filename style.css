@@ -28,7 +28,7 @@ a{
     text-decoration:none;
 }
 .big-wrapper{
-    padding:1rem 0 2rem;
+    /* padding:1rem 0 2rem; */
     width:100%;
     min-height:100vh;
     overflow:hidden;
@@ -42,10 +42,23 @@ a{
     max-width:81rem;
     width:100%;
     margin:0 auto;
-    padding: 0 3rem;
-    z-index:10;
+    /* padding: 0 3rem; */
+}
+nav{
+    color:#fff;
+}
+header{
+    padding:1rem;
+    top:0;
+    left:0;
+    background-color: var(--primaryColor);
+    width:100%;
+    position:fixed;
+    margin-bottom:1.5rem;
+    z-index:1000;
 }
 header .container{
+    background-color: #fff;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +74,7 @@ header .container{
     margin-top:0.6rem;
 }
 .logo h3{
-    color:var(--primaryColor);
+    color:var(--whiteColor);
     font-size: 1.55rem;
     line-height:1.2;
     font-weight:700;
@@ -74,8 +87,8 @@ header .container{
     align-items: center;
     list-style: none;
     position: relative;
-    background-color: #f1f8fc;
-    padding: .5rem 1.25rem;
+    /* background-color: #f1f8fc; */
+    /* padding: .5rem 1.25rem; */
 }
 
 .menu{
@@ -86,11 +99,11 @@ header .container{
 }
 
 .menu li a{
-    color:var(--textColor);
+    color:var(--whiteColor);
     margin:auto;
     display:inline-block;
     padding: 1.2rem;
-    padding-bottom:0.3rem; 
+    padding-bottom:0.3rem;
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
@@ -106,7 +119,7 @@ header .container{
     bottom:0px;
     left:0;
     transition: 0.15s ease-in-out;
-  
+
 }
 .menu li a:hover{
     color:var(--blueColor);
@@ -174,6 +187,9 @@ header .container{
         padding: 10px;
         color: var(--whiteColor);
     }
+    .showcase-area{
+        padding-top:15%;
+    }
 
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {right: 0;}
@@ -199,6 +215,9 @@ header .container{
         padding: 10px;
         color: var(--whiteColor);
     }
+    .showcase-area{
+        padding-top:15%;
+    }
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {right: 0;}
 }
@@ -206,7 +225,7 @@ header .container{
 
 @media (max-width: 750px){
     .right{
-        display:none; 
+        display:none;
     }
     .image{
         display: none;
@@ -236,8 +255,24 @@ header .container{
     background-color:var(--primaryColor);
     transform: scale(1) !important;
 }
+/* .menu .btn2{
+    display:inline-block;
+    padding: .9rem 1.9rem;
+    color: var(--textColor) !important;
+    background-color:#f1f8fc;
+    border-radius: 16px;
+    text-transform:capitalize;
+    transition: .3s;
+    justify-items:center;
+}
+.menu .btn2:hover{
+    background-color:var(--blueColor);
+    color:#fff;
+    transform: scale(1) !important;
+} */
 
 .showcase-area .container{
+    padding-top:5%;
     display:grid;
     grid-template-columns: repeat(2,1fr);
     align-items:center;
@@ -293,7 +328,7 @@ header .container{
     font-size:1.5rem;
     color:var(--blueColor);
     font-size:clamp(1.60rem, 4vw, 1rem);
-    
+
 }
 
 .about .content p{
@@ -314,7 +349,7 @@ header .container{
     color: var(--blueColor);
     align-items:center;
     justify-content: space-between;
-    gap: 0.5rem;   
+    gap: 0.5rem;
 }
 .services-nav{
     display: flex;
@@ -372,7 +407,7 @@ header .container{
 }
 .services-card p{
     margin-bottom: 1rem;
-    color: var(--greyColor);  
+    color: var(--greyColor);
 }
 .services-card a{
     color:var(--whiteColor);
@@ -424,7 +459,7 @@ header .container{
 
 }
 .contact-container .contact-info .box .icon{
-    min-width:60px; 
+    min-width:60px;
     height:60px;
     display:flex;
     justify-content:center;
@@ -572,7 +607,7 @@ footer{
     font: 1em;
     opacity: 0.7;
     transition: 0.5s;
-    
+
 }
 
 .footerNav ul li a:hover{
@@ -590,7 +625,7 @@ footer{
     height:3px;
     bottom:-10px;
     left:0;
-  
+
 }
 
 .footerNav ul li a:hover:after {
