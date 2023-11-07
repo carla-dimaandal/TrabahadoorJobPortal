@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styletry.css">
     <link rel="icon" href="TBDlogo.png">
     <script type="text/javascript" src="tryjs.js"></script>  
     <!-- font -->
@@ -34,7 +34,7 @@
                             <li><a href="#about">About</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="Login_Form.html" class="btn">Log in</a></li>
+                            <li><a href="Login_Form.html">Log in</a></li>
                             <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                         </span>
                         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -65,30 +65,22 @@
             <section class="about" id="about" data-aos="fade-left">
                 <h1 class="heading">About us</h1>
                 <div class="container">  
-            
                         <div class="image">
-                            <img src="image.jpg" alt="pwd-photo">
+                            <div class="mySlides fade">
+                                <img src="image.jpg">            
+                            </div>
+                              <div class="mySlides fade"> 
+                            <img src="TBDlogo.png"> 
+                              </div>
+                              <div class="mySlides fade">
+                                <img src="image.jpg">    
+                              </div>                           
                         </div>
-
                         <div class="content">
                             <h3>What makes us special?</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatum fuga aliquid obcaecati suscipit quae quaerat reprehenderit eius vitae consequatur! 
-                                Dignissimos quibusdam fuga sapiente voluptate placeat minima non et quae!
-                            </p>
-                        </div>
-                     </div>
-                     <div class="container">  
-            
-                        <div class="image">
-                            <img src="image.jpg" alt="pwd-photo">
-                        </div>
-
-                        <div class="content">
-                            <h3>What makes us special?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatum fuga aliquid obcaecati suscipit quae quaerat reprehenderit eius vitae consequatur! 
-                                Dignissimos quibusdam fuga sapiente voluptate placeat minima non et quae!
-                            </p>
-                            <br><a href="#" class="btn">Learn More</a>
+                                Dignissimos quibusdam fuga sapiente voluptate placeat minima non et quae!</p>
+                            <a href="#" class="btn">Learn More</a>
                         </div>
                      </div>
                     </section>
@@ -175,7 +167,7 @@
                                         <span>Type your Message...</span>
                                     </div>
                                     <div class="inputbox">
-                                        <input type="submit" name="" value="Send">
+                                        <input type="submit" name="" value="Send" class="btn">
                                     </div>
                                 </form>
                         </div>
@@ -208,6 +200,22 @@
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
     </script>
 </body>
 </html>
