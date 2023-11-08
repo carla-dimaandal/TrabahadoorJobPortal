@@ -6,9 +6,17 @@
     --whiteColor:#fff;
     --blackColor:#333;
     --textColor: #5A5A5A;
+    --bgColor: #f1f8fc;
 
 }
-
+.dark-theme{
+--primaryColor:gray;
+--blueColor:darkgray;
+--whiteColor:black;
+--blackColor:white;
+--textColor:white;
+--bgColor:black;
+}
 *, *:before, *:after{
     padding:0;
     margin:0;
@@ -32,7 +40,7 @@ a{
     width:100%;
     min-height:100vh;
     overflow:hidden;
-    background-color:#f1f8fc;
+    background-color:var(--bgColor);
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -48,7 +56,7 @@ a{
     margin:auto;
     display:inline-block;
     padding: .9rem 1.9rem;
-    color: #fff !important;
+    color: var(--whiteColor)!important;
     background-color:var(--blueColor);
     border-radius: 10px;
     text-transform:capitalize;
@@ -102,8 +110,6 @@ header .container{
     align-items: center;
     list-style: none;
     position: relative;
-    /* background-color: #f1f8fc; */
-    /* padding: .5rem 1.25rem; */
 }
 
 .menu{
@@ -111,6 +117,8 @@ header .container{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    text-align:right;
+    
 }
 
 .menu li a{
@@ -143,6 +151,11 @@ header .container{
 }
 .menu li a:hover:after {
     width: 98%;
+}
+
+#icon{
+    width:30px;
+    cursor:pointer;
 }
 
 .open-menu , .close-menu {
@@ -244,7 +257,7 @@ header .container{
 .cta .btn{
     display:inline-block;
     padding: .9rem 1.9rem;
-    color: #fff !important;
+    color: var(--whiteColor) !important;
     background-color:var(--blueColor);
     border-radius: 16px;
     text-transform:capitalize;
@@ -546,7 +559,6 @@ header .container{
     }
 }
 
-/*Footer*/
 
 footer{
     background-color: var(--blackColor);
@@ -578,12 +590,12 @@ footer{
 }
 
 .socialIcons a:hover{
-    background-color: #282727; /*change na lang*/
+    background-color: #282727; 
     transition: 0.5s;
 }
 
 .socialIcons a:hover i{
-    background-color: var(--whiteColor); /*change na lang*/
+    color:var(--whiteColor);
     transition: 0.5s;
 }
 
@@ -609,7 +621,7 @@ footer{
 
 .footerNav ul li a:hover{
     opacity: 1;
-    color:var(--blueColor);
+    color:var(--whiteColor);
     transform:scale(1.05);
     transition:0.3s;
 }
