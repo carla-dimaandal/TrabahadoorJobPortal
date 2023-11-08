@@ -36,9 +36,11 @@
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="Login_Form.html">Log in</a></li>
                             <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                            <img src="moon.png" id="icon">
                         </span>
                         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                     </ul>
+                    
                 </nav>
             </header>
     <!-- showcasee area starts -->
@@ -216,6 +218,16 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+var icon = document.getElementById("icon");
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "sun.png";
+    }else{
+        icon.src = "moon.png";
+    }
+}
+
     </script>
 </body>
 </html>
