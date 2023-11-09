@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style6.css">
-    <link rel="icon" href="TBDlogo.png">
-    <script type="text/javascript" src="tryjs.js"></script>  
+    <link rel="icon" href="Images\TBDlogo.png"> 
 <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,89 +21,66 @@
 <html>
     <body>
         <main class="big-wrapper">
-            <header>
-                <div class="container">
+          <header>
+            <nav>
+                <ul class='nav-bar'>
                     <div class="logo">
-                        <img src="TBDlogo.png" alt="Logo" class="img">
+                        <img src="Images\TBDlogo.png" alt="Logo" class="img">
                         <h3>Trabahadoor</h3>
                     </div>
-                        <ul class="links">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <a href="Login_Form.html" class="btn">Log in</a>
-                        </ul>
-                
-                        <!--Open burger menu-->
-                        <div class="open-menu">
-                            <i class="fas fa-bars"></i>  
-                    </div>
-                </div>
-                <div class="dropdown-menu">
-                    <ul> 
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <a href="Login_Form.html" class="btn">Log in</a>
-                    </ul>
-                </div>
-            </header>
-            <script>
-                const open_menu = document.querySelector('.open-menu')
-                const open_menu_icon = document.querySelector('.open-menu i')
-                const dropdown = document.querySelector('.dropdown-menu')
-
-                open_menu_icon.onclick = function(){
-                    dropdown.classList.toggle('open')
-                    const isOpen = dropdown.classList.contains('open')
-
-                    open_menu_icon.classList = isOpen
-                    ? 'fas fa-times'
-                    : 'fas fa-bars'
-                }
-            </script>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="Login_Form.html">Log in</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>   
+            </nav>
+        </header>
     <!--Start of Reg Form-->
         <div class="Mainshowcase">
             <section class="Regform">
                 <h3>Registration Form</h3>
                 <form action="#" class="form">
+                <div class="column">
                   <div class="input-box">
-                    <label>Full Name</label>
+                    <label>Full Name <i>(Buong Pangalan)</i></label>
                     <input type="text" id="Fullname" name="Fullname" placeholder="Enter full name" required />
                   </div>
-          
                   <div class="input-box">
-                    <label>Email Address</label>
-                    <input type="text" id="E-mail" name="E-mail" placeholder="Enter email address" required />
-                  </div>
-          
+                    <label>Age <i>(Edad)</i></label>
+                    <input type="text" id="Age" name="Age" placeholder="Enter your age" required />
+                  </div>  
+                </div>
                   <div class="column">
                     <div class="input-box">
                       <label>Phone Number</label>
                       <input type="number" id="Pnumber" name="Pnumber" placeholder="Enter phone number" required />
                     </div>
                     <div class="input-box">
-                      <label>BirthDate</label>
+                      <label>BirthDate<i>(Kaarawan)</i></label>
                       <input type="date" id="Bday" name="Bday" placeholder="Enter birth date" required />
                     </div>
                   </div>
                   <div class="gender-box">
-                    <h3>Gender</h3>
+                    <h3>Gender<i> (Kasarian)</i></h3>
                     <div class="gender-option">
                       <div class="gender">
                         <input type="radio" id="check-male" name="Gender" checked />
-                        <label for="check-male">Male</label>
+                        <label for="check-male">Male<i> (Lalaki)</i></label>
                       </div>
                       <div class="gender">
                         <input type="radio" id="check-female" name="Gender" />
-                        <label for="check-female">Female</label>
+                        <label for="check-female">Female<i> (Babae)</i></label>
                       </div>
                     </div>
                   </div>
                   <div class="input-box">
-                    <label>Type of Disability</label>
+                    <label>Type of Disability<i> (Uri ng Kapansanan)</i></label>
                     <input type="text" id="TPWD" name="TPWD" placeholder="Enter your Disability" required />
                   </div>
                   <div class="input-box address">
@@ -121,12 +97,12 @@
                   </div>
 
                   <div class="input-box">
-                    <label>Skills</label>
+                    <label>Skills<i> (Kasanayan)</i></label>
                     <input type="text" id="skills" name="skills" placeholder="Enter your skill/s (Type NA if none)" required />
                   </div>
                   
                   <div class="input-box">
-                    <label>Work Experience</label>
+                    <label>Work Experience<i> (Karanasan sa Trabaho)</i></label>
                     <input type="text" id="WorkE" name="WorkE" placeholder="Enter your Work Experience (Type NA if none)" required />
                   </div>
 
