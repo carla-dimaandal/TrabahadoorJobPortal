@@ -317,9 +317,19 @@ header .container{
     height:auto;
     margin-left:auto;
     margin-right:auto;
-    width:500px;  
+    width:600px;
+    height:400px;  
+}
+
+#pwdaoLogo{
+    width: 400px;
+    height: 400px;
 }
   
+#tbdLogo{
+    width: 400px;
+    height: 400px;
+}
   /* Fading animation */
   .fade {
     animation-name: fade;
