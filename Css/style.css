@@ -545,12 +545,9 @@ header .container{
     font-size:12px;
     transform: translateY(-20px);
 }
-
-.contact-form .inputbox input[type="submit"]{
-    width:100px;
-    background:var(--blueColor);
-    color:var(--whiteColor);
+.contact-form .inputbox .btn{
     cursor:pointer;
+    width:100px;
     padding:10px;
     font-size:1.1rem;
 }
