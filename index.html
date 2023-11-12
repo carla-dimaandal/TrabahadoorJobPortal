@@ -4,7 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css\style.css">
     <link rel="icon" href="Images\TBDlogo.png">
-    <script type="text/javascript" src="tryjs.js"></script>  
+    
+    
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){ 
+    emailjs.init("f2s9I_qLYG1bWIPlD");
+    })();
+</script> 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,8 +154,7 @@
             <section class="Contact" id="contact" data-aos="fade-right">
                 <div class="contact-content">
                     <h2>Contact Us</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        For more inquiries, you can visit
+                    <p> Want to get in touch? We would be glad to hear more from you. For more inquiries, you can visit
                     </p>
                     </div>
                     <div class="contact-container">
@@ -175,21 +183,21 @@
                                    </div>
                         <div class="contact-form">
                                 <form>
-                                    <h2>Send Message</h2>
+                                    <h2>Send a Message</h2>
                                     <div class="inputbox">
-                                        <input type="text" required="required">
+                                        <input type="text" required="required" id="name">
                                         <span>Full Name</span>
                                     </div>
                                     <div class="inputbox">
-                                        <input type="text" required="required">
+                                        <input type="text" required="required" id="email">
                                         <span>Email</span>
                                     </div>
                                     <div class="inputbox">
-                                        <input type=textarea required="required"></input>
+                                        <input type=textarea required="required" id="message"></input>
                                         <span>Type your Message...</span>
                                     </div>
                                     <div class="inputbox">
-                                        <input type="submit" name="" value="Send" class="btn">
+                                        <button class="btn" type="submit" onclick="sendMail()">Submit</button>
                                     </div>
                                 </form>
                         </div>
@@ -247,7 +255,28 @@ icon.onclick = function(){
         icon.src = "moon.png";
     }
 }
+function sendMail(){
+    var params = {
+        name: document.getElementById("name").value , 
+        email: document.getElementById("email").value , 
+        message: document.getElementById("message").value , 
+    };
+    const serviceID = "service_01xagwd";
+    const templateID = "template_j0iai7r";
 
-    </script>
+    emailjs.send(serviceID, templateID, params)
+    .then(function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+    document.getElementById("name").value= "";
+    document.getElementById("email").value= "";
+    document.getElementById("message").value="";
+  };
+   
+</script>
 </body>
 </html>
