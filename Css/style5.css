@@ -55,7 +55,7 @@ body{
 }
 
 .navigation.active{
-    width:80px;
+    width:70px;
 }
 
 .navigation ul{
@@ -145,14 +145,15 @@ body{
 /* main */
 .main{
     position:absolute;
-    width:calc(100%-300px);
+    /* width:calc(100%-300px); */
+    width:75%;
     left:300px;
     min-height:100vh;
     background:var(--whiteColor);
     transition:0.5s;
 }
 .main.active{
-    width:calc(100%-80px);
+    width:90%;
     left:80px;
 }
 .topbar{
