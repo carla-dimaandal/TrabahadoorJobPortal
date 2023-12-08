@@ -42,22 +42,22 @@
 ## Objectives
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The main objective of this project is to develop an online job portal to establish a more accessible and effective virtual job recruitment platform for the PWD Affairs Office Batangas (PDAO). 
 	Specifically, it aims to:
-Develop a website that would showcase the occupational profiles of individuals with disabilities, and the diverse range of career opportunities and organizations accepting PWDs.
-Establish a productive hiring system that guarantees the availability of activities for prospective employees, such as
-      2.1 Registering a job seeker account
-      2.2 Viewing list of employers and their job vacancies
-      2.3 Updating applicant information
-Contribute to an easier selection of candidates for employers through features that include:
-      3.1 Registering an employer account
-      3.2 Viewing list of PWD job seekers
-      3.3 Updating employer information
+1. Develop a website that would showcase the occupational profiles of individuals with disabilities, and the diverse range of career opportunities and organizations accepting PWDs.
+2. Establish a productive hiring system that guarantees the availability of activities for prospective employees, such as <br>
+      2.1 Registering a job seeker account <br>
+      2.2 Viewing list of employers and their job vacancies <br>
+      2.3 Updating applicant information <br>
+3. Contribute to an easier selection of candidates for employers through features that include: <br>
+      3.1 Registering an employer account <br>
+      3.2 Viewing list of PWD job seekers <br>
+      3.3 Updating employer information <br>
 
-Granting PDAO management access to management features such as:
-      4.1 Accessing the analytics dashboard 
-      4.2 Viewing applicant and employer information
-      4.3 Updating applicant and employer information
-      4.4 Deactivating applicant and employer account
-      4.5 Activating applicant and employer account
+4.  Granting PDAO management access to management features such as: <br>
+      4.1 Accessing the analytics dashboard  <br>
+      4.2 Viewing applicant and employer information <br>
+      4.3 Updating applicant and employer information <br>
+      4.4 Deactivating applicant and employer account <br>
+      4.5 Activating applicant and employer account <br>
 
 
 ## Context Diagram
