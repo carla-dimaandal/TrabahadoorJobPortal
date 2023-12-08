@@ -67,7 +67,9 @@ Granting PDAO management access to management features such as:
 ![level 0 diagram](https://github.com/carla-dimaandal/TrabahadoorJobPortal/assets/117631564/22cae53e-a160-4a90-9962-226ba3bd9184)
 
 ## Table Schema
-![schema](https://github.com/carla-dimaandal/TrabahadoorJobPortal/assets/117631564/3eebef4b-5a53-4d52-9dcc-faf366340a52)
+
+![table schema](https://github.com/carla-dimaandal/TrabahadoorJobPortal/assets/117631564/da65bc50-b7c0-457b-be07-3f91f00a662f)
+
 
 ## Video Presentation Link
 https://drive.google.com/file/d/1o-G6MnoUSw-k49IdCF93UGo8ptO56hBx/view?usp=drive_link
