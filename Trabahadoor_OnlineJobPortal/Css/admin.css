@@ -24,6 +24,7 @@ body{
     position:relative;
     width:100%;
 }
+/* navigation */
 .logo{
     display:flex;
     align-items:center;
@@ -141,7 +142,7 @@ body{
     box-shadow:35px -35px 0 10px var(--whiteColor);
     pointer-events:none;
 }
-
+/* main page */
 .main{
     position:absolute;
     width:75%;
@@ -172,6 +173,7 @@ body{
     font-size:2.5rem;
     cursor:pointer;
 }
+/* search function */
 
 .search{
     position:relative;
@@ -223,6 +225,7 @@ body{
     border:1px solid var(black);
     display:inline-block;
 }
+/* dashboard content */
 .card-box{
     position:relative;
     width:100%;
@@ -409,6 +412,7 @@ body{
         left:initial;
     }
 }
+/* table page */
 .page-title{
     text-align: center;
     font-size:clamp(1rem, 4vw, 1.75rem);
@@ -485,6 +489,7 @@ table>tbody>tr:nth-child(even) {
 table>tbody>tr:hover{
     filter: drop-shadow(0px 2px 6px #0002);
 }
+/* pagination */
 .box button{
     font-size:1rem; 
     background-color:var(--primaryColor);  
